@@ -53,4 +53,34 @@ public class Utilities {
 return cadena;
     
     }
+    /**
+     * buscador de cantidad de coincidencias
+     * @param frase
+     * @param texto
+     * @return 
+     */
+    public int contarOnincidencias(String frase, String texto){
+    
+        int cantidad=0, niv=0;
+        String busqueda;
+        if (frase.length()<texto.length()){
+        
+            for(int rec=frase.length();rec<=texto.length();rec++, niv++){
+                busqueda="";
+                for(int rec2=0+niv;rec2<frase.length();rec2++){
+                    
+                    busqueda+=String.valueOf(texto.charAt(2));
+                }
+                if(frase.equalsIgnoreCase(busqueda)){
+                
+                    cantidad++;
+                }
+            
+        }
+        }else{
+        
+            cantidad=0;
+        }
+        return cantidad;
+    }
 }
